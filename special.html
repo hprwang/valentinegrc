@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine's Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ff69b4;
+            color:white;
+            text-shadow: 2px 2px 0px black;  
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .quote-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-shadow: 0px 0px 0px white;
+            font-size: 20px;
+            width: 60%;
+            min-height: 100px;
+            position: relative;
+            color: black;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #941739;
+            text-shadow: 2px 2px 0px black;
+            color: white;
+            margin-top: 20px;
+            position: relative;
+        }
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .pop-effect {
+            animation: pop 0.3s ease-in-out;
+        }
+        .animated-text {
+            font-size: 2em;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <script>
+        const quotes = [
+            "Are you French? Because Eiffel for you!🗼",
+           "Your mine national treasure!😏",
+            "Its Friday I'm in Love (with you)!💊",
+            "You're the SZA to my Kendrick!🎧",
+            "You Rock my world!🪨",
+            "Will you b my fallontine!🥺",
+            "Did you fart, Cuz you blow me away!🌬️",
+            "I Luv you like Kanye Loves himself!🐻",
+        ];
+        
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteBox = document.getElementById("quote");
+            quoteBox.innerText = quotes[randomIndex];
+            quoteBox.classList.add("pop-effect");
+            setTimeout(() => {
+                quoteBox.classList.remove("pop-effect");
+            }, 300);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-text">🫰 Roses are Red, violent are blue I made this Valentine Gift jus for You! 😶‍🌫️</div>
+        <div class="quote-box" id="quote">Click below for Something!🧙🏼</div>
+        <br>
+        <button class="btn" onclick="newQuote()">Click for More ✨</button>
+    </div>
+</body>
+</html>

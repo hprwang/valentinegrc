@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day 💖</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ff69b4;
+      padding: 20px;
+      color: white;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .yes {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ff4d4d;
+      text-shadow: 2px 2px 0px black;
+      color: white;
+    }
+
+    .no {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ff4d4d;
+      text-shadow: 2px 2px 0px black;
+      color: white;
+      position: centre;
+    }
+
+    img {
+      width: 300px;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    @keyframes wiggle {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(5deg);
+      }
+
+      50% {
+        transform: rotate(-5deg);
+      }
+
+      75% {
+        transform: rotate(5deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #FFFFFF;
+      text-shadow: 3px 3px 0px black;
+      animation: wiggle 1s infinite;
+    }
+  </style>
+  <script>
+    function moveButton() {
+      let x = Math.random() * (window.innerWidth - 100);
+      let y = Math.random() * (window.innerHeight - 50);
+      document.getElementById("noBtn").style.left = x + "px";
+      document.getElementById("noBtn").style.top = y + "px";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>💘 Will You Be My Valentine? 💘</h1>
+    <img src="https://i.pinimg.com/736x/f3/f0/dd/f3f0ddc76b189f314df89b2d6e03bc5e.jpg" alt="Cute Valentine">
+    <img src="https://i.pinimg.com/736x/59/8b/1c/598b1c4e5b09e5ac93a3d5ecba1ec592.jpg" alt="Cute Valentine">
+    <br>
+    <button class="btn yes" onclick="location.href='thankyou.html'">YES 😍</button>
+    <button class="btn no" id="noBtn" onmouseover="moveButton()">NO 😭</button>
+  </div>
+</body>
+
+</html>

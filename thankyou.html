@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Surprise!</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ff69b4;
+      padding: 20px;
+      color: white;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+
+    img {
+      width: 300px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #8b0000;
+      text-shadow: 2px 2px 0px black;
+      color: white;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #FFFFFF;
+      text-shadow: 3px 3px 0px black;
+      animation: wiggle 1s infinite;
+    }
+
+    @keyframes wiggle {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-3deg);
+      }
+      75% {
+        transform: rotate(3deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🫰 Aye Thanks for Sayin YES Imma buy U Sum Fish N Chips Next Time GRC 🫰</h1>
+    <div class="gif-container">
+      <img src="https://media.tenor.com/lCKwsD2OW1kAAAAi/happy-cat-happy-happy-cat.gif" alt="Surprise Can">
+    </div>
+
+    <button class="btn" onclick="location.href='special.html'">Click for Surprise ✅</button>
+  </div>
+</body>
+</html>
